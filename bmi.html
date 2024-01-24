@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var weightInput = prompt("Enter your weight (kg):");
+
+            var weight = parseFloat(weightInput);
+
+            if (isNaN(weight)) {
+                alert("Please enter a valid weight value");
+            } else {
+
+                var heightInput = prompt("Please enter a height (cm):");
+
+
+                var height = parseFloat(heightInput);
+
+
+                if (isNaN(height)) {
+                    alert("Please enter a valid height value.");
+                } else {
+
+                    var bmi = weight / Math.pow(height / 100, 2);
+
+
+                    if (isNaN(bmi) || bmi <= 0) {
+                        alert("Unable to calculate BMI// Please check the weight and height values entered");
+                    } else {
+
+                        alert("weight: " + weight + " kg\nheight: " + height + " cm\nBMI: " + bmi.toFixed(2));
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
